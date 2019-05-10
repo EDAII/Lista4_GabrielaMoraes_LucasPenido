@@ -197,3 +197,20 @@ def radixSortLSDNomeProduto(vetor):
 
     for i in range(1, digitos+1):
         _countingSortNomeProduto(vetor,i)
+
+def radixSortLSD(listaProdutos, criterioOrdenacao):
+
+    if criterioOrdenacao == 1:
+        radixSortLSDNomeProduto(listaProdutos)
+
+    elif criterioOrdenacao == 2:
+        radixSortLSDData(listaProdutos)
+
+    elif criterioOrdenacao == 3:
+        radixSortLSDPreco(listaProdutos)
+
+    elif criterioOrdenacao == 4:
+        radixSortLSDAvaliacao(listaProdutos)
+
+    else:
+        radixSortLSDNumeroUnidades(listaProdutos)
