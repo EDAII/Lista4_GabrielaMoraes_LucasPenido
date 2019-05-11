@@ -20,13 +20,12 @@ def main():
             fim = clock()
             print('Tempo de execução: {:.6f} s'.format (fim - inicio))
             input("\n\nAperte ENTER para continuar")
-            print('====================== Lista de Produtos =========================\n')
+            print('\n====================== Lista de Produtos =========================\n')
             imprimeProdutos(listaProdutos)
-            input("Aperte ENTER para continuar")
             while True:
                 criterioOrdenacao = exibeMenuOrdenacao()
                 if criterioOrdenacao == 1:
-                    print('----------------- Ordem Alfabética ---------------------------')
+                    print('\n----------------- Ordem Alfabética ---------------------------')
                     listaProdutosHeap = deepcopy(listaProdutos)
                     listaProdutosRadixLSD = deepcopy(listaProdutos)
 
@@ -43,7 +42,7 @@ def main():
                     input("\n\nAperte ENTER para continuar")
                     imprimeProdutos(listaProdutos)
                 elif criterioOrdenacao == 2:
-                    print('----------------- Mais Recentes ---------------------------')
+                    print('\n----------------- Mais Recentes ---------------------------')
                     listaProdutosHeap = deepcopy(listaProdutos)
                     listaProdutosRadixLSD = deepcopy(listaProdutos)
 
@@ -60,7 +59,7 @@ def main():
                     input("\n\nAperte ENTER para continuar")
                     imprimeProdutos(listaProdutos)
                 elif criterioOrdenacao == 3:
-                    print('----------------- Mais Baratos ---------------------------')
+                    print('\n----------------- Mais Baratos ---------------------------')
                     listaProdutosHeap = deepcopy(listaProdutos)
                     listaProdutosRadixLSD = deepcopy(listaProdutos)
 
@@ -77,7 +76,7 @@ def main():
                     input("\n\nAperte ENTER para continuar")
                     imprimeProdutos(listaProdutos)
                 elif criterioOrdenacao == 4:
-                    print('----------------- Melhores Avaliados ---------------------------')
+                    print('\n----------------- Melhores Avaliados ---------------------------')
                     listaProdutosHeap = deepcopy(listaProdutos)
                     listaProdutosRadixLSD = deepcopy(listaProdutos)
 
@@ -94,7 +93,7 @@ def main():
                     input("\n\nAperte ENTER para continuar")
                     imprimeProdutos(listaProdutos)
                 elif criterioOrdenacao == 5:
-                    print('----------------- Mais Vendidos ---------------------------')
+                    print('\n----------------- Mais Vendidos ---------------------------')
                     listaProdutosHeap = deepcopy(listaProdutos)
                     listaProdutosRadixLSD = deepcopy(listaProdutos)
 
@@ -109,6 +108,20 @@ def main():
                     print('Tempo de execução Radix LSD Sort: {:.6f} s'.format (end_time - start_time))
 
                     input("\n\nAperte ENTER para continuar")
+                    imprimeProdutos(listaProdutos)
+
+                elif criterioOrdenacao == 6:
+                    print('\n----------------- Custo x Benefício ---------------------------')
+                    print('----------------- Critérios: Avaliação X Preço ---------------------------')
+
+                    listaProdutosHeap = deepcopy(listaProdutos)
+                    inicioHeapCustoBeneficio = clock()
+                    listaProdutos = heapSort(listaProdutosHeap, criterioOrdenacao)
+                    fimHeapCustoBeneficio  = clock()
+
+                    print('Tempo de execução Heap Sort: {:.6f} s'.format (fimHeapCustoBeneficio  - inicioHeapCustoBeneficio))
+                    input("\n\nAperte ENTER para continuar")
+
                     imprimeProdutos(listaProdutos)
                 else:
                     break

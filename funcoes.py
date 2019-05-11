@@ -66,13 +66,13 @@ def criaProdutos(listaProdutos, nProdutos):
 
 def imprimeProdutos(listaProdutos):
     for i in range(0, len(listaProdutos)):
-        print('Características do Produto ', i+1,'\n')
+        print('\nCaracterísticas do Produto ', i+1,'\n')
         print("Nome do Produto: ", listaProdutos[i].nome)
         print("Data de Lançamento: ", listaProdutos[i].dataLancamento)
         print("Preço: R$ ", listaProdutos[i].preco)
         print("Avaliação: ", listaProdutos[i].avaliacao, ' estrela(s)')
         print("Unidades Vendidas: ", listaProdutos[i].numeroVendas)
-        print('\n\n')
+        print('\n')
 
 def exibeMenuOrdenacao():
     print('\n\nO que você deseja visualizar ?')
@@ -81,6 +81,7 @@ def exibeMenuOrdenacao():
     print('3. Mais baratos')
     print('4. Melhores avaliados')
     print('5. Mais vendidos')
+    print('6. Custo Benefício')
     print('0. Sair')
     criterioOrdenacao = int(input('\nInsira o número da opção: '))
     criterioOrdenacao = validaCriterioOrdenacao(criterioOrdenacao)
@@ -88,7 +89,7 @@ def exibeMenuOrdenacao():
     return criterioOrdenacao
 
 def validaCriterioOrdenacao(criterioOrdenacao):
-    while criterioOrdenacao < 0 or criterioOrdenacao > 5:
-        print('Opção inválida! Digite um número entre 0 e 5')
+    while criterioOrdenacao < 0 or criterioOrdenacao > 6:
+        print('Opção inválida! Digite um número entre 0 e 6')
         criterioOrdenacao = int(input('Insira o número da opção: '))
     return criterioOrdenacao
