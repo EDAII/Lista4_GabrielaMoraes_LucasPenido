@@ -5,7 +5,7 @@
   - Lucas Penido Antunes - 16/0013143
 
 ## Sobre
-<p align="justify">Esse trabalho compreende os algoritmos <B>Radix LSD (Least Significant Digit) / MSD ( Most Significant Digit) e Heap Sort</B> inseridos em um contexto de loja virtual. O produto possui os seguintes campos: nome do produto, data de lançamento, preço, avaliação e número de unidades vendidas. O número de produtos e o critério de ordenação são escolhidos pelo usuário. As operações de ordenação e de geração de registros são cronometradas.</p>
+<p align="justify">Esse trabalho compreende os algoritmos <B>Radix LSD (Least Significant Digit) e Heap Sort</B> inseridos em um contexto de loja virtual. O produto possui os seguintes campos: nome do produto, data de lançamento, preço, avaliação e número de unidades vendidas. O número de produtos e o critério de ordenação são escolhidos pelo usuário. As operações de ordenação e de geração de registros são cronometradas.</p>
 
 ## Dependências
 > pip install Faker
