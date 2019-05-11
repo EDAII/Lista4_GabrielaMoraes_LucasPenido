@@ -27,7 +27,7 @@ def receberCliente():
 
 def exibirMenu():
     print('============== Loja Virtual EDA2 ===================')
-    print('1. Entrar na vitrine virtual')
+    print('1. Acessar vitrine virtual')
     print('0. Sair')
     opcao = str(input('Insira o número da ação que deseja realizar: '))
     opcao = validaEntradaMenu(opcao)
